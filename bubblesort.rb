@@ -1,14 +1,14 @@
 def bubble_sort (array)
-  loop do
-    clean_pass = true
+  sorted = false
+
+  while !sorted
+    sorted = true
     (0...array.length - 1).each do |i|
       if array[i] > array[i + 1]
         array[i], array[i + 1] = array[i + 1], array[i]
-        clean_pass = false
+        sorted = false
       end
     end
-
-    break if clean_pass
   end
 
   array
